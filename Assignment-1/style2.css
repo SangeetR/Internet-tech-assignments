@@ -1,0 +1,64 @@
+body{
+    /* background-color: coral; */
+    margin: 0;
+    /* padding-left: 20%; */
+    padding-right: 10%;
+    font-family: 'New Tegomin', serif;
+}
+
+.nav {
+     margin: 3%;
+     position: relative;
+}
+
+.nav-item {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+
+}
+
+.nav img {
+    
+    height: 70px;
+    /* position: absolute;
+    top: 0%;
+    left: 0%; */
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 5%;
+    right: 2%;
+    /* justify-content: right; */
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-photo {
+    height: 100vh;
+    width: auto;
+}
+
+
+/* Change above this  */
+.page{
+    float:left;
+    height:100vh;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
