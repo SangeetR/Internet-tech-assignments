@@ -6,9 +6,12 @@
     <head>
 
         <link rel="stylesheet" href="style2.css">
+        <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet"> 
-        
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/3d46b72bc9.js" crossorigin="anonymous"></script>
+
         <title>Sangeet Rathi's Personal Site</title>
     </head>
 
@@ -117,6 +120,40 @@
 
         <div class="page" id="projects">
             <h1>Projects</h1>
+            <div class="project-list">
+
+                <div class="project-card">
+                    <a href="https://github.com/SangeetR/Gdrive" target="_blank">
+                        <i class="fab fa-google-drive fa-10x " style="color: #00755f;"></i>
+                        <div class="project-label">
+                            Gdrive Downloader
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://github.com/SangeetR/Portfolio" target="_blank">
+                        <img src="portfolio.svg" alt="portfolio image" style="height: 10em; width: auto;">
+                        <div class="project-label">
+                            Personal Portfolio Site
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="well">
+                <pre class="code">
+                    <code>
+                        while True:
+                            if project.complete():
+                                add_project_to_this_page()
+                            else:
+                                project.build()    
+                    </code>
+                </pre>
+            </div>
+            <img src="project.svg" alt="Project Image" id="project-image">
         </div>
 
 
@@ -142,6 +179,9 @@
 
         <div class="page" id="code">
             <h1>Code</h1>
+            <div style="overflow: auto; height:80%;">    
+                <script src="https://gist.github.com/SangeetR/2b78e6f8c12142bb507963686630f5dc.js"></script>
+            </div>
         </div>
 
 
@@ -151,3 +191,4 @@
         </div>
     </body>
 </html>
+

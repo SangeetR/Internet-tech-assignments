@@ -1,9 +1,19 @@
 body{
     /* background-color: coral; */
     margin: 0;
+    
     /* padding-left: 20%; */
     padding-right: 10%;
     font-family: 'New Tegomin', serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
 }
 
 .nav {
@@ -35,6 +45,15 @@ body{
     /* justify-content: right; */
 }
 
+/* Change above this  */
+.page{
+    float:left;
+    height:100vh;
+    width: 100%;
+    /* overflow: auto; */
+    /* border: 1px solid black; */
+}
+
 #home {
     display: flex;
     flex-direction: row;
@@ -45,20 +64,79 @@ body{
     width: auto;
 }
 
+#projects {
 
-/* Change above this  */
-.page{
-    float:left;
-    height:100vh;
+    /* ? Color Palett Used
+     ** #c2895e
+     ** #441b00
+     ** #00755f
+     ** #dfe0df
+     shadow #2f4858
+     */
+    background-color: #c2895e;
     width: 100%;
-    /* border: 1px solid black; */
+    padding: 5%;
+    color: white;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.project-list {
+    display: flex;
+    flex-direction: row;
+    padding: 3% 5% 5% 3%;
 }
 
-a:visited{
-    color: black;
+.project-card {
+    padding: 2% 2% 1% 2%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #441b00;
+    transition: 0.3s;
+    background-color: #534439;
+    opacity: 0.8;
 }
+
+.project-card:hover {
+    box-shadow: 0 8px 16px 0 #2f4858;
+}
+
+.project-label {
+    margin-top: 20px;
+
+}
+
+.well {
+    border: 1px solid black;
+    margin-left: 5%;
+    margin-right: 48.5%;
+    /* width: 30%; */
+    box-shadow: 2px 4px 8px #441b00 inset;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: #534439;
+}
+
+.well:hover {
+    box-shadow: 6px 12px 24px #2f4858 inset;
+}
+
+#project-image {
+    height: 43%; 
+    width: auto; 
+    position: absolute; 
+    top: 125%; 
+    right: 10%; 
+    background-color:#534439;
+    border-radius: 3px;
+    /* opacity: 0.5; */
+    /* box-shadow: 0 4px 8px 0px black; */
+}
+
+/* .code {
+    background-color: #534439;
+} */
+
+
