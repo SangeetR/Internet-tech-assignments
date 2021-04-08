@@ -1,10 +1,6 @@
 body{
-    /* background-color: coral; */
     margin: 0;
-    
-    /* padding-left: 20%; */
-    padding-right: 10%;
-    font-family: 'New Tegomin', serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -14,6 +10,10 @@ a {
 
 a:visited{
     color: black;
+}
+
+.head {
+    font-family: 'Bitter', serif;
 }
 
 .nav {
@@ -47,9 +47,10 @@ a:visited{
 
 /* Change above this  */
 .page{
-    float:left;
     height:100vh;
-    width: 100%;
+    /* width: 100%; */
+    margin-top: 0;
+    margin-bottom: 0;
     /* overflow: auto; */
     /* border: 1px solid black; */
 }
@@ -57,6 +58,11 @@ a:visited{
 #home {
     display: flex;
     flex-direction: row;
+    background-image: linear-gradient(to left bottom, #9b89e0, #b464af, #b74374, #a42e3a, #7f2c00);
+    /* width: 1%; */
+    /* padding-right: 20%; */
+    /* border: 3px solid; */
+    /* font-family: 'Bitter', serif; */
 }
 
 .home-photo {
@@ -66,7 +72,7 @@ a:visited{
 
 #projects {
 
-    /* ? Color Palett Used
+    /* ? Color Palett Used and some more
      ** #c2895e
      ** #441b00
      ** #00755f
@@ -74,15 +80,29 @@ a:visited{
      shadow #2f4858
      */
     background-color: #c2895e;
-    width: 100%;
+    /* width: 100%; */
     padding: 5%;
     color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.project-box {
+    background-color: #2f4858;
+    margin-right: 5%;
+    /* margin-left: 10%; */
+    margin-bottom: -12.5%;
+    height: 20%;
+    width: auto;
+    border-radius: 2px;
 }
 
 .project-list {
     display: flex;
     flex-direction: row;
     padding: 3% 5% 5% 3%;
+    justify-content: center;
+    margin-right: 5%;
+    /* border: 1px solid; */
 }
 
 .project-card {
@@ -101,6 +121,7 @@ a:visited{
 
 .project-card:hover {
     box-shadow: 0 8px 16px 0 #2f4858;
+    background-color: #baa89b;
 }
 
 .project-label {
@@ -121,10 +142,11 @@ a:visited{
 
 .well:hover {
     box-shadow: 6px 12px 24px #2f4858 inset;
+    /* background-color: #baa89b; */
 }
 
 #project-image {
-    height: 43%; 
+    height: 30%; 
     width: auto; 
     position: absolute; 
     top: 125%; 
@@ -135,8 +157,36 @@ a:visited{
     /* box-shadow: 0 4px 8px 0px black; */
 }
 
-/* .code {
-    background-color: #534439;
-} */
+#code {
+    background-color: #ddd;
+    padding: 5%;
+    /* color: white; */
+}
 
+.source-code {
+    margin-right: 5%;
+    overflow: scroll;
+    height: 80%;
+    border: 20px inset grey;
+    border-radius: 5px;
+}
 
+.foot {
+    /* font-size: large; */
+    background-color: #76bbcc;
+    margin-top: 0px;
+
+    padding: 1% 0 2% 0 ;
+    /* height: 25%; */
+    width: 100%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+}
+
+.con-card {
+    margin: 20px;
+}
