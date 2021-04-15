@@ -1,0 +1,57 @@
+/* TODO :: ADD color which button is pressed  */
+/* TODO :: Radial Animation on button  */
+
+
+#cal-body{
+    margin: 20vh 25% 20vh 25%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 60vh;
+    border-radius: 5px;
+}
+
+#display-cover {
+    background: black;
+    height: 25%;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    padding: 2.5px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.text-disp {
+    align-self:  flex-end; 
+    text-align: right; 
+    margin-right: 10px;
+}
+
+
+#button-panel {
+    background-color: #1d1d1d;
+    height: 75%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 0 0 5px 5px;
+    padding: 2.5px;
+}
+
+.button {
+    /* width:25%; */
+    /* height: auto; */
+    /* padding-top: 12%; */
+    /* line-height: 225%; */
+    margin: 2.5px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.button:last-child{
+    background-color: rgb(16, 13, 167);
+    /* color: red; */
+}

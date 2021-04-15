@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="./style.css">
+        <title>CURAJ Admission Form</title>
+    </head>
+
+
+    <body>
+        <center>
+            <h1>CURAJ</h1>
+            <h2>Admission Form</h2>
+        </center>
+        <form action="#" name="admission">
+
+            <fieldset>
+                <legend>Personal Details</legend>
+                <div>
+                    <label for="student-name">Student's Name :</label>
+                    <input name="student-name" type="text" placeholder="Students Name" required>
+                </div>
+                
+                <div>
+                    <label for="dob">Date of Birth :</label>
+                    <input name="dob" type="date" required>
+                </div>
+                
+                <div>
+                    <label for="father-name">Father's Name :</label>
+                    <input name="father-name" type="text" placeholder="Student's Father" required>
+                </div>
+
+                <div>
+                    <label for="gender">Gender :</label>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female" checked> Female
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Educational Detail</legend>
+
+                <div>
+                    <label for="highest-education">Highest Education</label>
+                    <select name="highest-education" onchange="education_manager();">
+                        <option value="12th" selected>12th Passed</option>
+                        <option value="ug">Under Graduate</option>
+                        <option value="pg">Post Graduate</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="senior"> 12th Detail </label>
+                    <input name="senior" type="number" placeholder="Year" required>
+                    <input type="number" name="senior-grade" placeholder="Grade" required>
+                </div>
+
+                <div id = "ug" hidden>
+                    <label for="undergraduate">Graduation Details </label>
+                    <input type="number" name="undergraduate" placeholder="Year" required = 'false'>
+                    <input type="number" name="ug-grade" placeholder="Grade" required = 'false'>
+                
+                </div>
+
+                <div id = "pg" hidden>
+                    <label for="postgraduate">Post Graduation Details </label>
+                    <input type="number" name="postgraduate" placeholder="Year" required = 'false'>
+                    <input type="number" name="pg-grade" placeholder="Grade" required = 'false'>
+                
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Declaration & Extras</legend>
+                
+                <div>
+                    <input type="checkbox" name="terms" value="True" required>
+                    <label for="terms">Here is declare all the filled information is correct as per my knowledge</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="output" value="True">
+                    <label for="output">To see output check this box</label>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Submit" id="submit-button" onclick = "validate();">
+
+        </form>
+
+        <h2>You did great. <br> You can watch CURAJ Documentary while relaxing ...</h2>
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/MMTTxhT3tqw" 
+            title="CURAJ Documentary" 
+            frameborder="0" 
+            allow="autoplay; clipboard-write; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <script src="./main.js"></script>
+    </body>
+
+</html>
