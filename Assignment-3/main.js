@@ -19,9 +19,13 @@ const CAL_BUTTONS = [ {type: "op", label: "AC"},
                       {type: "dg", label: ")"}, 
                       {type: "op", label: "="}, ];
 const PRI = { "+":1,"-":1,"*":2,"/":2,};
-const REG = /(Numpad|[/*+=-]|Enter|Digit|Equal|Slash|Minus|Backspace|ArrowUp)/;
+const REG = /(Numpad|[/*+=-]|Enter|Digit|Equal|Slash|Minus|Backspace|ArrowUp|ArrowDown)/;
 const ART_REG_END = /[/*+-]$/;
 const IN_TO_POST = /([/*+()-])/;
+
+if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+    alert("To use '/' from keyboard please disable hotkeys or you will face problem in firefox");
+}
 
 // TODO :: there should be no 2 operators consequently ::::::::::::::::::::::::::::: Done
 // TODO :: Operator at starting problem :::::::::::::::::::::::::::::::::::::::::::: Done
@@ -29,10 +33,7 @@ const IN_TO_POST = /([/*+()-])/;
 // TODO :: Add History Using cookies    :::::::::::::::::::::::::::::::::::::::::::: Done
 // TODO :: UP key to retrive history    :::::::::::::::::::::::::::::::::::::::::::: Done
 // TODO :: Bracket support in place of 00 and C these are litral garbage ::::::::::: Done
-// TODO :: Infix to Postfix ::::::::::::::::::::::::::::::::::::::::::::::::::::::::  
-// TODO :: Eval problem - Use Postfix Eval :::::::::::::::::::::::::::::::::::::::::
-// TODO :: Double Click to see all history :::::::::::::::::::::::::::::::::::::::::
-// TODO :: PENDING ....... ARROW DOWN 
+// TODO :: PENDING ....... ARROW DOWN :::::::::::::::::::::::::::::::::::::::::::::: Done
 
 //Initialize program
 document.getElementById("main-disp").innerHTML = 0;
@@ -147,22 +148,32 @@ function driver (type, val) {
                             history_counter--;
                             if (cookie_jar[0] != "" && history_counter>-1)
                             {
-                                console.log(true);
                                 sec_disp.innerHTML = "";
-                                console.log(cookie_jar);
                                 disp.innerHTML = cookie_jar[history_counter];
                             }
+                            break;
+            case "ArrowDown": history_counter++;
+                              if (history_counter>-1 && history_counter<cookie_jar.length)
+                              {
+                                  sec_disp.innerHTML = "";
+                                  disp.innerHTML = cookie_jar[history_counter];
+                              }
+            
         }
         console.log(disp.innerHTML);
     } 
 }
 
 document.addEventListener("keydown", (value) => {
-    console.log("keydown" , value.key);
+    console.log("keydown" , value);
     // console.log(value.key, value.key in CAL_BUTTONS);
     // console.log(lookUpProfile(value.key, type));
     if (value.key == "X") { value.key = "*" }
         else if (value.key == "÷") { value.key = "/" }
+    // if (value.key == "/")
+    // {
+    //     press_esc()
+    // }
     
     if (REG.test(String(value.code)))
     {
@@ -195,42 +206,11 @@ function precedant(val1, val2)
 {
    return PRI[val1]<PRI[val2] ? true : false;
 }
-
-function to_postfix(infix)
-{
-    var infix_array = infix.split(IN_TO_POST);
-    var op = [];
-    console.log(op[-1])
-    var output = "";
-    for(var i=0; i<infix_array.length; i++)
-    {
-        if (infix_array[i] != "")
-        {
-            if (IN_TO_POST.test(infix_array[i]))
-            {
-                if(precedant(infix_array[i], op[-1]))
-                {
-                    op.push(infix_array[i]);   
-                }
-                else 
-                {
-                    output += infix_array[i];
-                }
-            }
-            else
-            {
-                output += infix_array[i];
-            }
-        }
-    }
-
-    return output;
-}
-
-
-
-
-
-
-
 console.log("All done");
+
+// ! Dispatch to window 
+// function press_esc()
+// {
+//     e = new KeyboardEvent("keydown", {bubbles : true, cancelable : true, key : "Escape", charCode : "0",keyCode: "27", shiftKey : false});
+    
+// }
