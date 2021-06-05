@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+input {
+    border: none;
+    width: 95%;
+    /* height: 1.5em; */
+    font-size: 1em;
+    padding: 0.2em;
+    margin: 5px;
+    background-color: black;
+    color: white;
+}
+
+input:focus-visible {
+    outline: none;
+    background-color: #2f2f2f;
+    font-family: 'Ubuntu Mono' , monospace;
+}
+
+/* .command-input {
+    width: 100%;
+    display: flex;
+} */
