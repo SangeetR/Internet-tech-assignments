@@ -1,5 +1,5 @@
 //First.java  
-import java.applet.Applet;  
+// import java.applet.Applet;  
 import java.awt.Graphics;  
 public class hello extends Applet{  
   
